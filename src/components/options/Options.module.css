@@ -1,0 +1,27 @@
+.container {
+  padding: 20px 0;
+}
+
+button {
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  background-color: rgb(75, 75, 225);
+  transition: background-color 0.3s ease-in-out;
+}
+button:hover {
+  background-color: rgb(89, 89, 234);
+  transform: scale(1.2);
+  animation: isZoom 0.5s ease;
+}
+
+@keyframes isZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
