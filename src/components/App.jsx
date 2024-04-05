@@ -5,14 +5,14 @@ import Notification from './notification/Notification';
 import { useState, useEffect } from 'react';
 
 export default function App() {
-  const updateFeedback = () => {
+  const getInitialFeedback = () => {
     const savedClicks = localStorage.getItem('clickCount');
     return savedClicks !== null
       ? JSON.parse(savedClicks)
       : { good: 0, neutral: 0, bad: 0 };
   };
 
-  const [feedbackTypes, setFeedbackTypes] = useState(updateFeedback);
+  const [feedbackTypes, setFeedbackTypes] = useState(getInitialFeedback);
   const handleFeedback = feedbackType => {
     setFeedbackTypes({
       ...feedbackTypes,
